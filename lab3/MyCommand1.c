@@ -8,16 +8,16 @@ int main(int argc, char **argv, char **envp) {
   intArray = (int *)malloc(sizeof(argc - 1));
 
   if (argc == 1) {
-    printf("Please input a list of non-negative whole numbers.");
+    printf("Please input a list of non-negative whole numbers.\n");
   }
 
   else {
     for (int i = 0; i < argc - 1; i++) {
       intArray[i] = atoi(argv[i + 1]);
-      sum = sum += intArray[i];
+      sum += intArray[i];
       printf("intArray[%d] = %d\n", i, intArray[i]);
     }
-    printf("Sum: %d", sum);
+    printf("Sum: %d\n", sum);
   }
 
   free(intArray);
